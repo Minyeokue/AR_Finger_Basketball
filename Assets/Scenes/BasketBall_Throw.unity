@@ -237,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &344318014
 Transform:
   m_ObjectHideFlags: 0
@@ -535,6 +535,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870476820}
   - component: {fileID: 1870476819}
+  - component: {fileID: 1870476821}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -575,6 +576,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1870476821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870476818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dba8b9251067847849d4e60f8e9f81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballFactory: {fileID: 8808860699708400055, guid: 733e209006ec0f64e8c03d2566079c98, type: 3}
 --- !u!1 &1995063178
 GameObject:
   m_ObjectHideFlags: 0

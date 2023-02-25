@@ -12,41 +12,110 @@
 
 
 
-// 0x00000001 System.Void GoalPostArrange::Start()
+extern void Ball_Throw_Start_mF75D29E56E111597C08C4C1D3425ACAF91AA2F2C (void);
+extern void Ball_Throw_Update_m359BC3B61AE2D69145FCC77ACA6B8E0545E5AF1F (void);
+extern void Ball_Throw_CreateBall_m60476838FE1B12C2DE459AAD86491BED3A02D429 (void);
+extern void Ball_Throw_Create_Pc_mF60CB7565CA7E130BCE751D06EBF1D756D229D9A (void);
+extern void Ball_Throw_MoveBall_PC_m17FEE2734E7DA9693F870477D06EEA12BA8557A0 (void);
+extern void Ball_Throw_MoveBall_m1617F1D35F3F8FCD75A422093EEA5DF1974640C0 (void);
+extern void Ball_Throw_ThrowBall_PC_m6FD84468279FD91F02213A952501985B23BD7DFB (void);
+extern void Ball_Throw_ThrowBall_m3B359BD16B0B13BA68DC538213CB5E5330B99185 (void);
+extern void Ball_Throw__ctor_mB4F07115CD85E28841D61C97303E9A5780EF9F2E (void);
+extern void DestoryBall_Start_m8A3E3E225D86EB93FD43CA66D3427FC180941847 (void);
+extern void DestoryBall_OnTriggerEnter_mC9A080BE2CD15C8519F0D987F26E47912371B1C4 (void);
+extern void DestoryBall_DestoryBasketBall_mD9D86720D255B25566B03A87B3293BBD1E80CDF2 (void);
+extern void DestoryBall_Update_mDE508A604B76B0E8FEFFAF94189ADE6808A75C88 (void);
+extern void DestoryBall__ctor_mADF3956185CC4E9930ADD52DBBD2EF073DF41F69 (void);
+extern void U3CDestoryBasketBallU3Ed__3__ctor_mAF96D71BFC18495BC9A4A710B7C823B92A7ABEB4 (void);
+extern void U3CDestoryBasketBallU3Ed__3_System_IDisposable_Dispose_mBC2E689ECBEBCD89E4837BD6167A385A64EC7DC4 (void);
+extern void U3CDestoryBasketBallU3Ed__3_MoveNext_m625CB20C75FC1AEDF987AE92FDD94C5D02B1BA86 (void);
+extern void U3CDestoryBasketBallU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m03753F8F6A18A3E694E1A5137EE897B4CE95E34D (void);
+extern void U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_Reset_mC5BBC6833ABE8810BF06A7C19DE9EA44ACDE3AC2 (void);
+extern void U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_get_Current_m6BFA651B4E1CE985156DDE4F6AC99590F400F616 (void);
 extern void GoalPostArrange_Start_m3B93CE43EE8A0F8FE623C39EE2608821859D122A (void);
-// 0x00000002 System.Void GoalPostArrange::Update()
 extern void GoalPostArrange_Update_mFFC6707983094C4BFC3EBEB6A8B6F8FA66B37A33 (void);
-// 0x00000003 System.Void GoalPostArrange::.ctor()
+extern void GoalPostArrange_UpdateForAndroid_m72EFA88DD842D597B6F8C9387BD946F009AC1BCC (void);
+extern void GoalPostArrange_UpdateForUnityEditor_mF5B5E21994471A9B1120CA6E9569338287A8968C (void);
 extern void GoalPostArrange__ctor_m2321EF4B4469EBDFB7604A32D8299074F9005C77 (void);
-// 0x00000004 System.Void UIManager::Start()
 extern void UIManager_Start_m113F392674AB08A26877728CD36F06332E869080 (void);
-// 0x00000005 System.Void UIManager::Update()
 extern void UIManager_Update_m95D2E80B8F461F15C1B9BD6DB0811F5CC18571AB (void);
-// 0x00000006 System.Void UIManager::.ctor()
 extern void UIManager__ctor_mC9DC2B8984E76F424E73C1860AD4BD3DEBF6573F (void);
-static Il2CppMethodPointer s_methodPointers[6] = 
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_IsEditorOnly_m59E10A16B0BDEA496377805E39C3D90B1E2C4815 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes_Get_mDAD527916A4779DB4ACAFEADC3BA7372671FA647 (void);
+extern void UnitySourceGeneratedAssemblyMonoScriptTypes__ctor_mE2C680837D47039E3F06032AA8C63FEDB7E783A5 (void);
+static Il2CppMethodPointer s_methodPointers[31] = 
 {
+	Ball_Throw_Start_mF75D29E56E111597C08C4C1D3425ACAF91AA2F2C,
+	Ball_Throw_Update_m359BC3B61AE2D69145FCC77ACA6B8E0545E5AF1F,
+	Ball_Throw_CreateBall_m60476838FE1B12C2DE459AAD86491BED3A02D429,
+	Ball_Throw_Create_Pc_mF60CB7565CA7E130BCE751D06EBF1D756D229D9A,
+	Ball_Throw_MoveBall_PC_m17FEE2734E7DA9693F870477D06EEA12BA8557A0,
+	Ball_Throw_MoveBall_m1617F1D35F3F8FCD75A422093EEA5DF1974640C0,
+	Ball_Throw_ThrowBall_PC_m6FD84468279FD91F02213A952501985B23BD7DFB,
+	Ball_Throw_ThrowBall_m3B359BD16B0B13BA68DC538213CB5E5330B99185,
+	Ball_Throw__ctor_mB4F07115CD85E28841D61C97303E9A5780EF9F2E,
+	DestoryBall_Start_m8A3E3E225D86EB93FD43CA66D3427FC180941847,
+	DestoryBall_OnTriggerEnter_mC9A080BE2CD15C8519F0D987F26E47912371B1C4,
+	DestoryBall_DestoryBasketBall_mD9D86720D255B25566B03A87B3293BBD1E80CDF2,
+	DestoryBall_Update_mDE508A604B76B0E8FEFFAF94189ADE6808A75C88,
+	DestoryBall__ctor_mADF3956185CC4E9930ADD52DBBD2EF073DF41F69,
+	U3CDestoryBasketBallU3Ed__3__ctor_mAF96D71BFC18495BC9A4A710B7C823B92A7ABEB4,
+	U3CDestoryBasketBallU3Ed__3_System_IDisposable_Dispose_mBC2E689ECBEBCD89E4837BD6167A385A64EC7DC4,
+	U3CDestoryBasketBallU3Ed__3_MoveNext_m625CB20C75FC1AEDF987AE92FDD94C5D02B1BA86,
+	U3CDestoryBasketBallU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m03753F8F6A18A3E694E1A5137EE897B4CE95E34D,
+	U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_Reset_mC5BBC6833ABE8810BF06A7C19DE9EA44ACDE3AC2,
+	U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_get_Current_m6BFA651B4E1CE985156DDE4F6AC99590F400F616,
 	GoalPostArrange_Start_m3B93CE43EE8A0F8FE623C39EE2608821859D122A,
 	GoalPostArrange_Update_mFFC6707983094C4BFC3EBEB6A8B6F8FA66B37A33,
+	GoalPostArrange_UpdateForAndroid_m72EFA88DD842D597B6F8C9387BD946F009AC1BCC,
+	GoalPostArrange_UpdateForUnityEditor_mF5B5E21994471A9B1120CA6E9569338287A8968C,
 	GoalPostArrange__ctor_m2321EF4B4469EBDFB7604A32D8299074F9005C77,
 	UIManager_Start_m113F392674AB08A26877728CD36F06332E869080,
 	UIManager_Update_m95D2E80B8F461F15C1B9BD6DB0811F5CC18571AB,
 	UIManager__ctor_mC9DC2B8984E76F424E73C1860AD4BD3DEBF6573F,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_IsEditorOnly_m59E10A16B0BDEA496377805E39C3D90B1E2C4815,
+	UnitySourceGeneratedAssemblyMonoScriptTypes_Get_mDAD527916A4779DB4ACAFEADC3BA7372671FA647,
+	UnitySourceGeneratedAssemblyMonoScriptTypes__ctor_mE2C680837D47039E3F06032AA8C63FEDB7E783A5,
 };
-static const int32_t s_InvokerIndices[6] = 
+static const int32_t s_InvokerIndices[31] = 
 {
-	4938,
-	4938,
-	4938,
-	4938,
-	4938,
-	4938,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	5568,
+	6997,
+	7108,
+	7108,
+	5533,
+	7108,
+	6891,
+	6997,
+	7108,
+	6997,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	7108,
+	10674,
+	10704,
+	7108,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	6,
+	31,
 	s_methodPointers,
 	0,
 	NULL,
@@ -58,7 +127,7 @@ const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule =
 	0,
 	NULL,
 	NULL,
-	NULL, // module initializer,
+	NULL,
 	NULL,
 	NULL,
 	NULL,
