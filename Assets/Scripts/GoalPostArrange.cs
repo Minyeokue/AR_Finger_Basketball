@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR;
 
 // 골포스트를 배치하고 싶다
 
@@ -15,25 +13,14 @@ public class GoalPostArrange : MonoBehaviour
 {
     public GameObject goalPostFactory;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        if (goalPostFactory != null)
-        {
-            goalPostFactory = GameObject.Find("Basketball Goal");
-        }
-
-        // 
-        goalPostFactory.SetActive(false);
-    }
+    bool isCreated = false;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0 && !isCreated)
         {
             Touch touch = Input.GetTouch(0);
-
 
             if (touch.phase == TouchPhase.Began)
             {
@@ -43,17 +30,13 @@ public class GoalPostArrange : MonoBehaviour
 
                 if (Physics.Raycast(ray, out hitInfo))
                 {
+                    isCreated = true;
+
                     GameObject goalPost = GameObject.Instantiate(goalPostFactory);
 
                     goalPost.transform.position = hitInfo.point;
 
-                    goalPost.transform.up = hitInfo.normal;
-
-                    Vector3 dir = Camera.main.transform.position - this.transform.position;
-
-                    dir.y = 0;
-
-                    this.transform.forward = dir;
+                    goalPost.transform.forward = -Camera.main.transform.forward;
                 }
             }
         }
