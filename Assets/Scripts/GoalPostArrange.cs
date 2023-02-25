@@ -15,12 +15,9 @@ using UnityEngine.XR.ARFoundation;
 
 public class GoalPostArrange : MonoBehaviour
 {
-<<<<<<< HEAD
-    //
-=======
+
     ARRaycastManager arRaycastManager;
 
->>>>>>> cf4a7910079699ba2e6ada728b18af63ee85d27e
     public GameObject goalPostFactory;
 
     public GameObject arCamera;

@@ -89,7 +89,10 @@ public class Ball_Throw : MonoBehaviour
     }
     private void ThrowBall()
     {
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
+        {
+
+        }
     }
 
 }
