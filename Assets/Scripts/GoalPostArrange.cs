@@ -13,6 +13,7 @@ using UnityEngine.XR.ARFoundation;
 
 public class GoalPostArrange : MonoBehaviour
 {
+    //
     public GameObject goalPostFactory;
 
     // Start is called before the first frame update
