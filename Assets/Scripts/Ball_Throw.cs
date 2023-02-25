@@ -16,16 +16,18 @@ public class Ball_Throw : MonoBehaviour
     public GameObject ballFactory;
     Rigidbody rigid;
     int creatBallCount = 0;
-    int ballMaxCount = 1;
+    int ballMaxCount = 10;
     Transform cam;
     float ballZ = 1f;
     GameObject ball;
     bool ballFollw = false;
+    Vector3 startPos;
+    Vector3 endPos;
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main.transform;
-        
+
     }
 
     // Update is called once per frame
@@ -34,15 +36,17 @@ public class Ball_Throw : MonoBehaviour
 
 #if UNITY_EDITOR
         Create_Pc();
-        //MoveBall_PC();
-        ThrowBall();
+        MoveBall_PC();
+        ThrowBall_PC();
 #else
         CreateBall();
+        MoveBall();
+        ThrowBall();
 #endif
 
     }
 
-   
+
     // 터치했을때 공을 생성하고 드래그하면 볼이 따라온다
     void CreateBall()
     {
@@ -50,8 +54,12 @@ public class Ball_Throw : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (creatBallCount < ballMaxCount && touch.phase == TouchPhase.Began)
         {
-
-            ball = Instantiate(ballFactory);
+            GameObject newBall = Instantiate(ballFactory);
+            ball = newBall;
+            startPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
+            rigid = ball.GetComponent<Rigidbody>();
+            rigid.useGravity = false;
+            ballFollw = true;
             creatBallCount++;
             ball.transform.position = new Vector3(cam.position.x, cam.position.y, cam.position.z + ballZ);
         }
@@ -61,8 +69,11 @@ public class Ball_Throw : MonoBehaviour
     {
         if (creatBallCount < ballMaxCount && Input.GetMouseButtonDown(0))
         {
-
-            ball = Instantiate(ballFactory);
+            GameObject newBall = Instantiate(ballFactory);
+            ball = newBall;
+            startPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
+            rigid = ball.GetComponent<Rigidbody>();
+            rigid.useGravity = false;
             ballFollw = true;
             creatBallCount++;
             ball.transform.position = new Vector3(cam.position.x, cam.position.y, cam.position.z + ballZ);
@@ -72,7 +83,7 @@ public class Ball_Throw : MonoBehaviour
     {
         if (ballFollw && Input.GetMouseButton(0))
         {
-            Vector3 point = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
             ball.transform.position = point;
         }
 
@@ -82,17 +93,38 @@ public class Ball_Throw : MonoBehaviour
         Touch touch = Input.GetTouch(0);
         if (ballFollw && touch.phase == TouchPhase.Moved)
         {
-            Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z));
+            Vector3 point = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
             ball.transform.position = point;
         }
 
     }
-    private void ThrowBall()
+    private void ThrowBall_PC()
     {
         if (Input.GetMouseButtonUp(0))
         {
-
+            ballFollw = false;
+            endPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
+            //볼의 X,Y 방향
+            Vector3 dir = endPos - startPos;
+            //볼의 z 방향
+            Vector3 camZ = Camera.main.transform.forward;
+            rigid.AddForce(dir * dir.magnitude*10+ camZ * dir.magnitude * 15);
+            rigid.useGravity = true;
         }
     }
-
+    private void ThrowBall()
+    {
+        Touch touch = Input.GetTouch(0);
+        if (touch.phase == TouchPhase.Ended)
+        {
+            ballFollw = false;
+            endPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
+            //볼의 X,Y 방향
+            Vector3 dir = endPos - startPos;
+            //볼의 z 방향
+            Vector3 camZ = Camera.main.transform.forward;
+            rigid.AddForce(dir * dir.magnitude * 10 + camZ * dir.magnitude * 15);
+            rigid.useGravity = true;
+        }
+    }
 }
