@@ -112,6 +112,8 @@ public class GoalPostArrange : MonoBehaviour
 
                 GameObject goalPost = GameObject.Instantiate(goalPostFactory);
 
+                GameManager.instance.isRimCreat = true;
+
                 goalPost.transform.position = hitInfo.point;
 
                 goalPost.transform.forward = hitInfo.normal;

@@ -15,8 +15,8 @@ public class Ball_Throw : MonoBehaviour
 
     public GameObject ballFactory;
     Rigidbody rigid;
-    int creatBallCount = 0;
-    int ballMaxCount = 10;
+    int creatBallCount;
+    int ballMaxCount;
     Transform cam;
     float ballZ = 1f;
     GameObject ball;
@@ -27,7 +27,8 @@ public class Ball_Throw : MonoBehaviour
     void Start()
     {
         cam = Camera.main.transform;
-
+        creatBallCount = GameManager.instance.CurrenBallCount;
+        ballMaxCount = GameManager.instance.BallMaxCount;
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class Ball_Throw : MonoBehaviour
     {
         //터치 했을때 
         Touch touch = Input.GetTouch(0);
-        if (creatBallCount < ballMaxCount && touch.phase == TouchPhase.Began)
+        if (creatBallCount < ballMaxCount && touch.phase == TouchPhase.Began && GameManager.instance.isRimCreat == true)
         {
             GameObject newBall = Instantiate(ballFactory);
             ball = newBall;
@@ -67,7 +68,7 @@ public class Ball_Throw : MonoBehaviour
 
     void Create_Pc()
     {
-        if (creatBallCount < ballMaxCount && Input.GetMouseButtonDown(0))
+        if (creatBallCount < ballMaxCount && Input.GetMouseButtonDown(0) && GameManager.instance.isRimCreat == true)
         {
             GameObject newBall = Instantiate(ballFactory);
             ball = newBall;
@@ -100,7 +101,7 @@ public class Ball_Throw : MonoBehaviour
     }
     private void ThrowBall_PC()
     {
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0)&& ball != null)
         {
             ballFollw = false;
             endPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));
@@ -108,14 +109,14 @@ public class Ball_Throw : MonoBehaviour
             Vector3 dir = endPos - startPos;
             //볼의 z 방향
             Vector3 camZ = Camera.main.transform.forward;
-            rigid.AddForce(dir * dir.magnitude*10+ camZ * dir.magnitude * 15);
+            rigid.AddForce(dir * dir.magnitude * 10 + camZ * dir.magnitude * 15);
             rigid.useGravity = true;
         }
     }
     private void ThrowBall()
     {
         Touch touch = Input.GetTouch(0);
-        if (touch.phase == TouchPhase.Ended)
+        if (touch.phase == TouchPhase.Ended && ball != null)
         {
             ballFollw = false;
             endPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Input.mousePosition.z + ballZ));

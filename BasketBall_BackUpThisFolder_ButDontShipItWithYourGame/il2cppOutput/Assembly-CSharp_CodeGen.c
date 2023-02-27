@@ -21,17 +21,15 @@ extern void Ball_Throw_MoveBall_m1617F1D35F3F8FCD75A422093EEA5DF1974640C0 (void)
 extern void Ball_Throw_ThrowBall_PC_m6FD84468279FD91F02213A952501985B23BD7DFB (void);
 extern void Ball_Throw_ThrowBall_m3B359BD16B0B13BA68DC538213CB5E5330B99185 (void);
 extern void Ball_Throw__ctor_mB4F07115CD85E28841D61C97303E9A5780EF9F2E (void);
-extern void DestoryBall_Start_m8A3E3E225D86EB93FD43CA66D3427FC180941847 (void);
-extern void DestoryBall_OnTriggerEnter_mC9A080BE2CD15C8519F0D987F26E47912371B1C4 (void);
-extern void DestoryBall_DestoryBasketBall_mD9D86720D255B25566B03A87B3293BBD1E80CDF2 (void);
-extern void DestoryBall_Update_mDE508A604B76B0E8FEFFAF94189ADE6808A75C88 (void);
-extern void DestoryBall__ctor_mADF3956185CC4E9930ADD52DBBD2EF073DF41F69 (void);
-extern void U3CDestoryBasketBallU3Ed__3__ctor_mAF96D71BFC18495BC9A4A710B7C823B92A7ABEB4 (void);
-extern void U3CDestoryBasketBallU3Ed__3_System_IDisposable_Dispose_mBC2E689ECBEBCD89E4837BD6167A385A64EC7DC4 (void);
-extern void U3CDestoryBasketBallU3Ed__3_MoveNext_m625CB20C75FC1AEDF987AE92FDD94C5D02B1BA86 (void);
-extern void U3CDestoryBasketBallU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m03753F8F6A18A3E694E1A5137EE897B4CE95E34D (void);
-extern void U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_Reset_mC5BBC6833ABE8810BF06A7C19DE9EA44ACDE3AC2 (void);
-extern void U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_get_Current_m6BFA651B4E1CE985156DDE4F6AC99590F400F616 (void);
+extern void GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F (void);
+extern void GameManager_get_isRimCreat_mA6B22D568555AA6334048EF1656B0BFFB34CB2E0 (void);
+extern void GameManager_set_isRimCreat_m5BCB1CB99E969E5007131A18F688D9CD3E960B68 (void);
+extern void GameManager_get_CurrenBallCount_m46EFB9AB24DE5DC66F05EB71F8FAA98BBB80087C (void);
+extern void GameManager_set_CurrenBallCount_m7CA936B4817EF327F0855F6FB0347200B34F66E3 (void);
+extern void GameManager_get_BallMaxCount_m718909C6D132CA1818461CB4786C5DD1CC0ED723 (void);
+extern void GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2 (void);
+extern void GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41 (void);
+extern void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (void);
 extern void GoalPostArrange_Start_m3B93CE43EE8A0F8FE623C39EE2608821859D122A (void);
 extern void GoalPostArrange_Update_mFFC6707983094C4BFC3EBEB6A8B6F8FA66B37A33 (void);
 extern void GoalPostArrange_UpdateForAndroid_m72EFA88DD842D597B6F8C9387BD946F009AC1BCC (void);
@@ -43,7 +41,7 @@ extern void UIManager__ctor_mC9DC2B8984E76F424E73C1860AD4BD3DEBF6573F (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_IsEditorOnly_m59E10A16B0BDEA496377805E39C3D90B1E2C4815 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_Get_mDAD527916A4779DB4ACAFEADC3BA7372671FA647 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes__ctor_mE2C680837D47039E3F06032AA8C63FEDB7E783A5 (void);
-static Il2CppMethodPointer s_methodPointers[31] = 
+static Il2CppMethodPointer s_methodPointers[29] = 
 {
 	Ball_Throw_Start_mF75D29E56E111597C08C4C1D3425ACAF91AA2F2C,
 	Ball_Throw_Update_m359BC3B61AE2D69145FCC77ACA6B8E0545E5AF1F,
@@ -54,17 +52,15 @@ static Il2CppMethodPointer s_methodPointers[31] =
 	Ball_Throw_ThrowBall_PC_m6FD84468279FD91F02213A952501985B23BD7DFB,
 	Ball_Throw_ThrowBall_m3B359BD16B0B13BA68DC538213CB5E5330B99185,
 	Ball_Throw__ctor_mB4F07115CD85E28841D61C97303E9A5780EF9F2E,
-	DestoryBall_Start_m8A3E3E225D86EB93FD43CA66D3427FC180941847,
-	DestoryBall_OnTriggerEnter_mC9A080BE2CD15C8519F0D987F26E47912371B1C4,
-	DestoryBall_DestoryBasketBall_mD9D86720D255B25566B03A87B3293BBD1E80CDF2,
-	DestoryBall_Update_mDE508A604B76B0E8FEFFAF94189ADE6808A75C88,
-	DestoryBall__ctor_mADF3956185CC4E9930ADD52DBBD2EF073DF41F69,
-	U3CDestoryBasketBallU3Ed__3__ctor_mAF96D71BFC18495BC9A4A710B7C823B92A7ABEB4,
-	U3CDestoryBasketBallU3Ed__3_System_IDisposable_Dispose_mBC2E689ECBEBCD89E4837BD6167A385A64EC7DC4,
-	U3CDestoryBasketBallU3Ed__3_MoveNext_m625CB20C75FC1AEDF987AE92FDD94C5D02B1BA86,
-	U3CDestoryBasketBallU3Ed__3_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_m03753F8F6A18A3E694E1A5137EE897B4CE95E34D,
-	U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_Reset_mC5BBC6833ABE8810BF06A7C19DE9EA44ACDE3AC2,
-	U3CDestoryBasketBallU3Ed__3_System_Collections_IEnumerator_get_Current_m6BFA651B4E1CE985156DDE4F6AC99590F400F616,
+	GameManager_Awake_m4B6E8E2AF58C95C9A2A0C4637A34AE0892CB637F,
+	GameManager_get_isRimCreat_mA6B22D568555AA6334048EF1656B0BFFB34CB2E0,
+	GameManager_set_isRimCreat_m5BCB1CB99E969E5007131A18F688D9CD3E960B68,
+	GameManager_get_CurrenBallCount_m46EFB9AB24DE5DC66F05EB71F8FAA98BBB80087C,
+	GameManager_set_CurrenBallCount_m7CA936B4817EF327F0855F6FB0347200B34F66E3,
+	GameManager_get_BallMaxCount_m718909C6D132CA1818461CB4786C5DD1CC0ED723,
+	GameManager_Start_m87A71D65F3171A58DBDDBFB03832ADA65643D0E2,
+	GameManager_Update_m7F29D8E933B8D21D2E67507979C0F12ACF87BB41,
+	GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368,
 	GoalPostArrange_Start_m3B93CE43EE8A0F8FE623C39EE2608821859D122A,
 	GoalPostArrange_Update_mFFC6707983094C4BFC3EBEB6A8B6F8FA66B37A33,
 	GoalPostArrange_UpdateForAndroid_m72EFA88DD842D597B6F8C9387BD946F009AC1BCC,
@@ -77,7 +73,7 @@ static Il2CppMethodPointer s_methodPointers[31] =
 	UnitySourceGeneratedAssemblyMonoScriptTypes_Get_mDAD527916A4779DB4ACAFEADC3BA7372671FA647,
 	UnitySourceGeneratedAssemblyMonoScriptTypes__ctor_mE2C680837D47039E3F06032AA8C63FEDB7E783A5,
 };
-static const int32_t s_InvokerIndices[31] = 
+static const int32_t s_InvokerIndices[29] = 
 {
 	7108,
 	7108,
@@ -89,16 +85,14 @@ static const int32_t s_InvokerIndices[31] =
 	7108,
 	7108,
 	7108,
-	5568,
-	6997,
-	7108,
-	7108,
-	5533,
-	7108,
 	6891,
-	6997,
+	5460,
+	6961,
+	5533,
+	6961,
 	7108,
-	6997,
+	7108,
+	7108,
 	7108,
 	7108,
 	7108,
@@ -115,7 +109,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	31,
+	29,
 	s_methodPointers,
 	0,
 	NULL,
