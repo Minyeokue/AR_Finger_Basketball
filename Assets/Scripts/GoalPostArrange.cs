@@ -28,7 +28,7 @@ public class GoalPostArrange : MonoBehaviour
     public GameObject unityWall;
 
     // 골대가 만들어졌는지를 체크하는 변수 bool
-    bool isCreated = false;
+    public bool isCreated = false;
 
     // 화면의 중앙
     Vector3 center;
@@ -117,8 +117,6 @@ public class GoalPostArrange : MonoBehaviour
                 isCreated = true;
 
                 GameObject goalPost = GameObject.Instantiate(goalPostFactory);
-
-                GameManager.instance.isRimCreat = true;
 
                 goalPost.transform.position = hitInfo.point;
 

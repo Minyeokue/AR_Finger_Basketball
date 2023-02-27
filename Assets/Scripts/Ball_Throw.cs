@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,12 +22,14 @@ public class Ball_Throw : MonoBehaviour
     bool ballFollw = false;
     Vector3 startPos;
     Vector3 endPos;
+    float force = 10f;
     // Start is called before the first frame update
     void Start()
     {
         cam = Camera.main.transform;
-        creatBallCount = GameManager.instance.CurrenBallCount;
+        //creatBallCount = GameManager.instance.CurrenBallCount;
         ballMaxCount = GameManager.instance.BallMaxCount;
+        creatBallCount = GameManager.instance.CurrenBallCount;
     }
 
     // Update is called once per frame
@@ -78,6 +79,8 @@ public class Ball_Throw : MonoBehaviour
             ballFollw = true;
             creatBallCount++;
             ball.transform.position = new Vector3(cam.position.x, cam.position.y, cam.position.z + ballZ);
+            print(GameManager.instance.CurrenBallCount);
+            
         }
     }
     void MoveBall_PC()
@@ -109,7 +112,7 @@ public class Ball_Throw : MonoBehaviour
             Vector3 dir = endPos - startPos;
             //볼의 z 방향
             Vector3 camZ = Camera.main.transform.forward;
-            rigid.AddForce(dir * dir.magnitude * 10 + camZ * dir.magnitude * 15);
+            rigid.AddForce(dir * dir.magnitude * force + camZ * dir.magnitude * force);
             rigid.useGravity = true;
         }
     }
@@ -124,7 +127,7 @@ public class Ball_Throw : MonoBehaviour
             Vector3 dir = endPos - startPos;
             //볼의 z 방향
             Vector3 camZ = Camera.main.transform.forward;
-            rigid.AddForce(dir * dir.magnitude * 10 + camZ * dir.magnitude * 15);
+            rigid.AddForce(dir * dir.magnitude * force + camZ * dir.magnitude * force);
             rigid.useGravity = true;
         }
     }

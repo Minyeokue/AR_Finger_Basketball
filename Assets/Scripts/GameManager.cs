@@ -11,24 +11,26 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+
     }
     int MaxCountBall = 10;
     int currentBallCount = 0;
-    bool isGoalCreat = false;
+    //bool isGoalCreat;
+    GoalPostArrange GoalPost;
     public bool isRimCreat
     {
         get
         {
-            return isGoalCreat;
+            return GoalPost.isCreated;
         }
-        set
+        /*set
         {
-            isGoalCreat = value;
-            if (isGoalCreat == false)
+            GoalPost.isCreated = value;
+            if (GoalPost.isCreated == false)
             {
-                isGoalCreat = true;
+                GoalPost.isCreated = true;
             }
-        }
+        }*/
     }
     public int CurrenBallCount
     {
@@ -56,13 +58,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        if (GoalPost == null)
+        {
+            GoalPost = GameObject.Find("XR Origin").GetComponent<GoalPostArrange>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        print(CurrenBallCount);
     }
 
 }
